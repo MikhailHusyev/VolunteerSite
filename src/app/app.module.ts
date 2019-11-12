@@ -10,7 +10,7 @@ import { appRoutes} from './routes'
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
