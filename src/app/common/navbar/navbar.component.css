@@ -1,0 +1,8 @@
+.linkColor{
+    size: 25px;
+    color: #707070 ! important;
+}
+
+.linkColor:hover{
+    color: #16D1E6 ! important;
+}
