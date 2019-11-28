@@ -6,11 +6,13 @@ import { HomePageComponent,
 import { RouterModule } from '@angular/router'
 import { publicRoutes } from './public.routes'
 import { CommonModule } from '@angular/common'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
     imports: [
         RouterModule.forChild(publicRoutes),
-        CommonModule
+        CommonModule,
+        FontAwesomeModule
     ],
     exports: [],
     declarations: [
