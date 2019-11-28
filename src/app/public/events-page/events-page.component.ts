@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
     selector: 'eventspage-component',
@@ -9,9 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class EventsPageComponent implements OnInit {
     constructor() { }
 
-    testValues: string[]
+    values= [1, 2 , 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
     ngOnInit() {
-        this.testValues = ["Test", "Test", "Test", "Test","Test", "Test", "Test"]
     }
 }

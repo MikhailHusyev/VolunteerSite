@@ -5,10 +5,12 @@ import { HomePageComponent,
         } from './index'
 import { RouterModule } from '@angular/router'
 import { publicRoutes } from './public.routes'
+import { CommonModule } from '@angular/common'
 
 @NgModule({
     imports: [
-        RouterModule.forChild(publicRoutes)
+        RouterModule.forChild(publicRoutes),
+        CommonModule
     ],
     exports: [],
     declarations: [
