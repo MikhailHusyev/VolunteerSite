@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { IEvent} from '../../models/volunteer/volunteer-event.model'
+import { faSearch} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
     selector: 'eventspage-component',
@@ -9,8 +11,12 @@ import { Component, OnInit } from '@angular/core'
 export class EventsPageComponent implements OnInit {
     constructor() { }
 
-    values= [1, 2 , 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    events: IEvent[]
+    searchIcon = faSearch
 
     ngOnInit() {
+
+        let firstEvent:IEvent = {id:1, name:"Blue KC", date: new Date('10/20/2019'), location:"Kansas City", description:"This is a great event to join and have fun in.", capacity:50}
+        this.events = [firstEvent]
     }
 }

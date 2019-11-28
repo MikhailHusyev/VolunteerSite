@@ -1,8 +1,14 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <div *ngFor="let item of values" class="col-md-4">
-                <event-component></event-component>
+            <form class="form-inline">
+                <input class="form-control my-2 mr-3 ml-3 w-150" type="text" placeholder="Search" aria-label="Search">
+                <fa-icon class="ml-1" [icon]="searchIcon"></fa-icon>
+            </form>
+        </div>
+        <div class="row">
+            <div *ngFor="let event of events" class="col-md-4">
+                <event-component [event]="event"></event-component>
             </div>
         </div>
     </div>
