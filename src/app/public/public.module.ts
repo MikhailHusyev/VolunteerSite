@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AboutUsComponent } from './about-us/about-us.component'
 import { HomePageComponent,
          EventsPageComponent,
          EventComponent
@@ -17,6 +18,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     exports: [],
     declarations: [
         HomePageComponent,
+        AboutUsComponent,
         EventsPageComponent,
         EventComponent
     ],
