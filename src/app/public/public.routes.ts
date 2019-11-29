@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router'
-import { HomePageComponent } from './home-page/home-page.component'
+import { EventsPageComponent, HomePageComponent} from './index'
 
 export const publicRoutes:Routes = [
-    {path:'', component: HomePageComponent}
+    {path:'', component: HomePageComponent},
+    {path:'events', component: EventsPageComponent}
 ]
