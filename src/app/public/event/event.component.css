@@ -3,4 +3,11 @@
     word-wrap: break-word;
 }
 
-.thumbnail {min-height:210px;}
+.thumbnail {
+    min-height:210px;
+}
+
+.thumbnail:hover {
+    cursor: pointer;
+    opacity: 0.80;
+}

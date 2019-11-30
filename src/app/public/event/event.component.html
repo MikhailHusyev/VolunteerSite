@@ -1,14 +1,16 @@
-<div class="well hoverwell thumbnail">
-        <img src="https://heritagesandysprings.org/wp-content/uploads/2019/07/Heritage-Sandy-Springs-Museum-and-Park-Volunteers-1024x.jpg" class="limit-img rounded img-fluid w-100"/>
-    <div class="row">
-        <div class="text-right col-auto">{{event.name}}</div>
-        <i class="fas fa-cloud"></i>
-        <div class="col text-right"><fa-icon [icon]="calendarIcon"></fa-icon> {{event?.date | date:short}}</div>
-    </div>
-    <div class="row">
-        <div class="col text-left"><fa-icon [icon]="mapIcon"></fa-icon> {{event?.location}}</div>
-    </div>
-    <div class="row justify-content-start">
-        <div class="col-auto text-wrap adjust-description">{{event?.description | slice:0:250 }}</div>
+<div [routerLink]="['/event', event.Eid]" class="well thumbnail">
+        <img src="{{event?.picture_location}}" class="limit-img rounded img-fluid w-100"/>
+    <div class="container">
+        <div class="row">
+            <div class="text-right col-auto"><h3>{{event.charity_name}}</h3></div>
+            <i class="fas fa-cloud"></i>
+            <div class="col text-right"><fa-icon [icon]="calendarIcon"></fa-icon> {{event?.date | date: fullTime}} </div>
+        </div>
+        <div class="row">
+            <div class="col text-left"><fa-icon [icon]="mapIcon"></fa-icon> {{event?.event_address}}</div>
+        </div>
+        <div class="row justify-content-start">
+            <div class="col-auto text-wrap adjust-description">{{event?.event_description | slice:0:250 }}</div>
+        </div>
     </div>
 </div>
