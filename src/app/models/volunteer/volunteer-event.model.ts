@@ -1,8 +1,9 @@
 export interface IEvent{
-    id: number,
-    name: string,
+    Eid: number,
+    charity_name: number,
+    event_name: string,
     date: Date,
-    location: string,
-    description: string,
-    capacity: number
+    event_address: string,
+    event_description: string,
+    picture_location: string
 }

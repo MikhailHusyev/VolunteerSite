@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="text-center">
+            <img class="img-fluid adjusts-height rounded" src="{{event?.picture_location}}" alt="Image"/>
+        </div>
+
+        <div class="row">
+            <div class="col text-center"><h1>{{event.event_name}}</h1></div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center"><h5>{{event.charity_name}}</h5></div>
+        </div>
+
+        <div class="row">
+                <div class="col text-center">Date: {{event.date | date:'short'}}</div>
+        </div>
+
+        <div class="row mt-3">
+                <div class="col text-center">{{event.location}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-center"><button type="button" class="btn btn-outline-primary">Volunteer</button></div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-3"></div>
+            <div class="col-lg-6 adjust-description text-center">{{event?.event_description}}</div>
+        </div>
+    </div>
+</div>
