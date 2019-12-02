@@ -4,6 +4,7 @@ import { HomePageComponent,
          EventsPageComponent,
          EventComponent,
          EventPageComponent,
+         LoginPageComponent
         } from './index'
 import { RouterModule } from '@angular/router'
 import { publicRoutes } from './public.routes'
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http'
         AboutUsComponent,
         EventsPageComponent,
         EventComponent,
-        EventPageComponent
+        EventPageComponent,
+        LoginPageComponent
     ],
     providers: [],
 })
