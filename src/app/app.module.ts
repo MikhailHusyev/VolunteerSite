@@ -5,7 +5,7 @@ import { NavbarComponent } from './common/navbar/navbar.component'
 import { RouterModule } from '@angular/router'
 import { appRoutes} from './routes'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
-import { GetEventsService} from './services/index'
+import { GetEventsService, CreateEventService} from './services/index'
 import { EventResolver } from './services/event-services/event-resolver.service'
 import { HttpClientModule } from '@angular/common/http'
 
@@ -23,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http'
   ],
   providers: [
     GetEventsService,
-    EventResolver
+    EventResolver,
+    CreateEventService
   ],
   bootstrap: [AppComponent]
 })
