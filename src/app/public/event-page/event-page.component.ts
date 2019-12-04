@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IEvent } from 'src/app/models/volunteer/volunteer-event.model';
+import { CreateEventService } from '../../services/create-service/create-event.service'
 
 @Component({
     selector: 'eventpage-component',
@@ -10,7 +11,7 @@ import { IEvent } from 'src/app/models/volunteer/volunteer-event.model';
 
 export class EventPageComponent implements OnInit {
     
-    constructor(private route: ActivatedRoute) { }
+    constructor(private route: ActivatedRoute, private eventService: CreateEventService, private router:Router) { }
     
     event:IEvent
 
@@ -18,6 +19,11 @@ export class EventPageComponent implements OnInit {
         this.route.data.forEach((data) =>{
             this.event = data['event'];
         })
-
      }
+
+     
+     delete(){
+        this.eventService.deleteEvent(this.event.Eid)
+        this.router.navigate(['events'])
+    }
 }
