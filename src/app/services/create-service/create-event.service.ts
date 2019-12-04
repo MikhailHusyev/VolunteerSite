@@ -11,7 +11,18 @@ export class CreateEventService {
     createEvent(event: IEvent){
         let options = {headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
         
-        console.log(event)
         return this.httpClient.post<IEvent>('http://localhost/Volunteer/VolunteerSite/src/app/api/event/create_event.php', event, options).subscribe()
+    }
+
+    deleteEvent(id: number){
+        let idObject = {
+            id: id
+        }
+        let options = {headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'}),
+                        body: idObject}
+
+        console.log(options)
+
+        return this.httpClient.delete('http://localhost/Volunteer/VolunteerSite/src/app/api/event/delete_event.php', options).subscribe()
     }
 }

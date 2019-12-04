@@ -20,4 +20,5 @@ export class GetEventsService {
         let params = new HttpParams().set('id',id)
         return this.httpClient.get<IEvent>('http://localhost/Volunteer/VolunteerSite/src/app/api/event/read_one.php', {params: params})
     }
+
 }
